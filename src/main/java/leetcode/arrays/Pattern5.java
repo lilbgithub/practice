@@ -35,3 +35,4 @@ public class Pattern5 {
 1 3
 2 1
 */
+
