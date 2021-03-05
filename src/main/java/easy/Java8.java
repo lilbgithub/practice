@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+/**
+ * https://learning.oreilly.com/videos/java-8-fundamentals/9780133489354/9780133489354-JFUN_lesson17_05
+ */
+
 public class Java8 {
 
     public static void main(String args[]) {
@@ -34,7 +38,8 @@ public class Java8 {
         System.out.println("############intermediate#############");
         IntStream.range(1, 10).forEach(System.out::println);
 
-        Integer[] list2 = {1, 2, 3, 4};
+        Integer[] list2 = {1, 2, 4,3};
+
 
         //Integer stream
         System.out.println("############integer#############");

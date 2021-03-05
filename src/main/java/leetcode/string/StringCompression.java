@@ -2,8 +2,8 @@ package leetcode.string;
 
 public class StringCompression {
     public static void main(String[] args) {
-        // compression1("aabbbccabbffffg");
-        compression2("aabbbccabbffffg");
+         compression1("aabbbccabbffffg");
+        //compression2("aabbbccabbffffg");
 
     }
 
