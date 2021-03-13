@@ -1,4 +1,4 @@
-package practice;
+package practice.gettingStarted;
 
 public class findDigitsInNumber {
     public static void main(String[] args) {

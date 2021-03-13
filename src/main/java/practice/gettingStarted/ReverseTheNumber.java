@@ -1,4 +1,4 @@
-package practice;
+package practice.gettingStarted;
 
 public class ReverseTheNumber {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package practice;
+package practice.gettingStarted;
 
 public class fibbonaceTillN {
     public static void main(String[] args) {
