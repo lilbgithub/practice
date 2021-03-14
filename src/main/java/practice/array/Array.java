@@ -10,58 +10,153 @@ public class Array {
         // sumOfArray();
         // reverseDemo();
         // rotate();
-       // subArray();
-       // binarySearch();
-        findLastIndex();
+        // subArray();
+        // binarySearch();
+        //findLastIndex();
+        // print2D();
+        //   wakanda();
+       // spiral();
+        System.out.println(Arrays.toString(searchIn2D()));
     }
+    public static int[] searchIn2D() {
+        int[][] arr = {{1, 2, 3, 4},{5,6,7,8},{9,10,11,12}};
+        int k = 9;
+        int maxCol = arr[0].length -1;
+        int minRow = 0;
+        int maxRow = arr.length -1;
+        while(maxCol >=0 && minRow<= maxRow){
+            if(k == arr[minRow][maxCol]){
+                System.out.println(minRow);
+                System.out.println(maxCol);
+                return new int[]{minRow,maxCol};
+            }else if(k > arr[minRow][maxCol]){
+                minRow++;
+            }else {
+                maxCol--;
+            }
+        }
+
+        return new int[]{-1,-1};
+    }
+    public static void spiral() {
+        int[][] arr = {{1, 2, 3, 5},
+                        {4, 5, 6, 8},
+                        {5, 6, 7, 6},
+                        {1, 2, 3, 9}};
+
+        int minRow = 0;
+         int minCol = 0;
+         int maxRow = arr.length -1;
+         int maxCol = arr[0].length -1;
+         int maxCount = arr.length * arr[0].length;
+         int count =0;
+        while (count < maxCount){
+            //min col
+            for(int i=0, j=minCol ; i<= maxRow; i++){
+                System.out.println( arr[i][j]);
+                count++;
+            }
+            minCol++;
+  /*           //max row
+            for(int i=0, j=maxRow ; i<= maxCol; i++){
+                System.out.println( arr[j][i]);
+                count++;
+            }
+            maxRow--;
+           //max col
+            for(int i=maxRow, j=maxCol ; i>= maxRow; i--){
+                System.out.println( arr[j][i]);
+                count++;
+            }
+            maxCol--;
+            //min row
+            for(int i=0, j=minRow ; i<= maxRow; i++){
+                System.out.println( arr[j][i]);
+                count++;
+            }
+            minRow++;*/
+
+        }
+    }
+
+    public static void wakanda() {
+        int[][] arr = {{1, 2, 3}, {4, 5, 6}, {5, 6, 7}, {1, 2, 3}};
+        for (int col = 0; col < arr[0].length; col++) {
+            if (col % 2 == 0) {
+                //top to bottom
+                for (int row = 0; row < arr.length; row++) {
+                    System.out.println(arr[row][col]);
+                }
+            } else {
+                // bottom  to top
+                for (int row = arr.length - 1; row >= 0; row--) {
+                    System.out.println(arr[row][col]);
+                }
+
+            }
+
+        }
+    }
+
+    public static void print2D() {
+        int[][] arr = {{1, 2, 3}, {4, 5, 6}, {5, 6, 7}, {1, 2, 3}};
+
+        for (int row = 0; row < arr.length; row++) {
+            for (int colum = 0; colum < arr[row].length; colum++) {
+                System.out.print(arr[row][colum]);
+            }
+            System.out.println();
+        }
+    }
+
     public static void findLastIndex() {
-        int[] arr  = {1,2,3,4,4,5};
-        int k=4;
+        int[] arr = {1, 2, 3, 4, 4, 5};
+        int k = 4;
 
         int li = -1;
         int left = 0;
-        int right = arr.length-1;
+        int right = arr.length - 1;
 
-        while (left<=right)
-        {
-            int mid = (left +right) / 2;
-            if(k <arr[mid]){
-                right = mid-1;
-            }else if(k >arr[mid]){
-                left = mid +1;
-            }else {
-                li =  mid;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (k < arr[mid]) {
+                right = mid - 1;
+            } else if (k > arr[mid]) {
+                left = mid + 1;
+            } else {
+                li = mid;
                 left = mid + 1;
             }
         }
-        System.out.println("last index is : " +li);
+        System.out.println("last index is : " + li);
 
     }
+
     public static void binarySearch() {
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {1, 2, 3, 4, 5};
         int k = 5;
 
         int left = 0;
         int right = arr.length;
 
-        while (left < right){
-            int mid = (left +right) /2;
-            if( k < arr[mid]){
-                right = mid -1;
-            }else if(k > arr[mid]){
-                left = mid +1;
-            }else {
+        while (left < right) {
+            int mid = (left + right) / 2;
+            if (k < arr[mid]) {
+                right = mid - 1;
+            } else if (k > arr[mid]) {
+                left = mid + 1;
+            } else {
 
                 System.out.println("k is at location: " + mid);
                 break;
             }
 
 
-
         }
 
 
     }
+
     public static void subArray() {
         char[] arr = {'a', 'b', 'c', 'd', 'e'};
         List<Character[]> subArray = new ArrayList<>();
