@@ -82,7 +82,31 @@ class Mode1 {
 
 
     }
+    public static void format3(String[] words, int maxLenght){
+        List<String> result = new ArrayList<>();
+        StringBuilder element = new StringBuilder();
+        String current =words[0];
+        for (int i=1; i< words.length;  i++){
+            String next = words[i];
+             current = concat(current, next);
 
+            if(!checkLength(current, maxLenght)){
+                result.add(current);
+            }else {
+
+            }
+        }
+
+    }
+
+    public static String concat(String current, String next){
+        return  current + "_"+ next;
+    }
+
+    public static boolean checkLength(String s, int k){
+        if(s.length()> k) return false;
+        return true;
+    }
     public static String[] format(String[] words, int maxLenght){
 
 

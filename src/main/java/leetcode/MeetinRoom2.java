@@ -15,9 +15,9 @@ public class MeetinRoom2 {
             return 0;
         }
 
-        Arrays.sort(intervals, Comparator.comparing(ints -> ints[0]));
+        Arrays.sort(intervals, Comparator.comparing(interval -> interval[0]));
 
-        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparing(ints -> ints[1]));
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparing(interval -> interval[1]));
 
         pq.add(intervals[0]);
         for (int i=1; i< intervals.length; i++){

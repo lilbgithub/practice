@@ -1,9 +1,55 @@
 package practice.strings;
 
+/**
+ * select order.id , customer,id from oders left outer join customer customer  order.id == customer.id.
+ */
 public class StringsPractice {
     public static void main(String[] args) {
        // substrings();
       //  palindromSubSring();
+        //stringCompression1();
+        stringCompression2();
+
+
+    }
+    public static final void stringCompression2() {
+        String str = "wwwwaaadexxxxxx";
+        StringBuilder sb = new StringBuilder();
+        char pre = str.charAt(0);
+        int count = 0;
+        for(int i=0; i<str.length(); i++){
+            char ch = str.charAt(i);
+            if(pre != ch){
+                sb.append(pre);
+                if(count >1){
+                    sb.append(count);
+                }
+                pre = ch;
+                count = 1;
+            }else {
+                count++;
+            }
+        }
+        sb.append(pre);
+        if(count >1){
+            sb.append(count);
+        }
+        System.out.println("Result "+ sb.toString());
+    }
+    public static final void stringCompression1() {
+        String str = "wwwwaaadexxxxxx";
+        StringBuilder sb = new StringBuilder();
+        char pre = str.charAt(0);
+        sb.append(pre);
+        for(int i=0; i<str.length(); i++){
+            char ch = str.charAt(i);
+            if(pre != ch){
+                pre = ch;
+                sb.append(ch);
+            }
+        }
+        System.out.println("stringCompression1 : "+ sb.toString());
+
     }
     public static final void palindromSubSring(){
         String s = "abccbc";

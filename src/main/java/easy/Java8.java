@@ -1,5 +1,7 @@
 package easy;
 
+import practice.array.Array;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -92,7 +94,6 @@ public class Java8 {
                 .filter(someRange)
                 .sorted(Comparator.comparing(Employee::getSalary))
                 .forEach(System.out::println);
-
 
         System.out.println("############ find first#############");
         Employee employee = employees.stream()
