@@ -2,7 +2,7 @@ package leetcode;
 
 public class RainFall {
     public static void main(String[] args) {
-        int[] arr = {0, 2, 0, 3};
+        int[] arr = {3, 0, 2, 0, 4};//{0, 2, 0, 3};
         int leftMax = 0;
         int rightMax = 0;
         int left = 0;
