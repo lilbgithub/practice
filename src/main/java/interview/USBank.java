@@ -3,6 +3,7 @@ package interview;
  * Find the pairs in a given array that form the greatest product.
  *
  * Example: given {2, 4, 1, 0, 3}, the answer is {3,4} (3x4 = 12)
+ *  print the highest product combination even if it is negative
  *
  */
 
