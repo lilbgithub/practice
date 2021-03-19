@@ -4,21 +4,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Service {
-    public static Map <String, User > userStorage =  new HashMap<>();
+    public static final Map <String, User > USER_STORAGE =  new HashMap<>();
 
     public User createUser(String userHandle, String userFullName ){
 
         validateUser(userHandle, userFullName);
 
         User user =  new User(userHandle, userFullName);
-        userStorage.put(userHandle, user);
+        USER_STORAGE.put(userHandle, user);
         return user;
     }
 
 
     public void postTweet(String userHandle, String tweet){
    //validate user exists in store
-        User user = userStorage.get(userHandle);
+        User user = USER_STORAGE.get(userHandle);
         user.postTweet(tweet);
     }
 
@@ -26,13 +26,13 @@ public class Service {
 
    public void follow(String followerHandle, String followeeHandle){
        //validate user exists in store
-       User user = userStorage.get(followerHandle);
+       User user = USER_STORAGE.get(followerHandle);
        user.addFollowee(followeeHandle);
    }
 
     public void unfollow(String followerHandle, String followeehandle){
         //validate user exists in store
-        User user = userStorage.get(followerHandle);
+        User user = USER_STORAGE.get(followerHandle);
         user.removeFollowee(followeehandle);
     }
 
