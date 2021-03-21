@@ -17,6 +17,7 @@ class USBank {
         if(array== null || array.length <2){
             throw new IllegalArgumentException("Please provide valide array input");
         }
+
         int max = array[0];
         int prevMax = array[1];
         int negativeMax = array[0];

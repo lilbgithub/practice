@@ -76,15 +76,10 @@ For row equals to 6, the output should be similar to the following:
             scanner = new Scanner(inputStream, "UTF-8");
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-
-                lineCunt++;
                 String[] words = line.split("\\s+");
-
+                lineCunt++;
                 wordCount = wordCount + words.length;
-
-                byte[] byteArrray = line.getBytes();
-                byteCount = byteCount + byteArrray.length + 1;
-
+                byteCount = byteCount + line.getBytes().length + 1;
             }
         } catch (IOException e) {
             System.out.println("Unable to load file: " + fileName);
@@ -93,6 +88,10 @@ For row equals to 6, the output should be similar to the following:
             close(scanner, inputStream);
         }
 
+        printResult(lineCunt, wordCount, byteCount);
+    }
+
+    private static void printResult(int lineCunt, int wordCount, int byteCount) {
         System.out.println("Number of lines: " + lineCunt);
         System.out.println("Number of words: " + wordCount);
         System.out.println("Number of bytes: " + byteCount);

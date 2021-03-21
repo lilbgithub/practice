@@ -8,11 +8,11 @@ public class Patterns {
         //  printPattern2(5);
        // printPattern3(5);
        // printPattern5(5);
-      //  printPatternTrangle(4);
+        printPatternTrangle(4);
 
         //Patterns.pattern11(5);
        // pattern6(5);
-        pattern7(5);
+      //  pattern7(5);
     }
 
     /**

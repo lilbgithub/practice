@@ -34,8 +34,9 @@ public class Util {
 
     }
 
-    public static void main(String args[]) {
-        Util.fuzBuz(null);
+    public static void main(String args[])
+    {
+        Util.fuzBuz(15);
     }
 
     /**

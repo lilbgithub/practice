@@ -11,3 +11,5 @@ public class findDigitsInNumber {
         System.out.println("Total digits : " + digits);
     }
 }
+
+
