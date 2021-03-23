@@ -22,6 +22,7 @@ class USBank {
         int prevMax = array[1];
         int negativeMax = array[0];
         int negativePrevMax = array[1];
+
         for(int i=1; i< array.length; i++){
             int currentElement = array[i];
             if(currentElement > max){

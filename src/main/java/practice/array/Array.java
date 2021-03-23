@@ -15,45 +15,81 @@ public class Array {
         //findLastIndex();
         // print2D();
         //   wakanda();
-       // spiral();
-        System.out.println(Arrays.toString(searchIn2D()));
+        // spiral();
+        // System.out.println(Arrays.toString(searchIn2D()));
+        System.out.println(Arrays.toString(findSubArrayContainingGivenSUm(new int[]{1, 4, 20, 3, 10, 5}, 33)));
     }
+
+    public static int[] findSubArrayContainingGivenSUm(int[] array, int expected) {
+        int top = 0;
+        int bottom = 0;
+        int sum = 0;
+        //point both pointer are the begining
+        while (top < array.length) {
+
+            sum -= array[top];
+            if (sum == expected) {
+                return new int[]{top, bottom};
+            }
+            bottom =top;
+            while (bottom < array.length && sum > expected)
+            //increment bottom pointer and keep adding to sum{}
+            {
+                sum += array[bottom];
+                //check if sum == given number
+
+                if (sum == expected) {
+                    return new int[]{top, bottom};
+                } else if (sum > expected) {
+                    //if sum is greater break inner loop
+                    break;
+                }
+                bottom++;
+            }
+            top++;
+            //increment top pointer and substract from sum
+        }
+        return new int[]{-1, -1};
+    }
+
+
     public static int[] searchIn2D() {
-        int[][] arr = {{1, 2, 3, 4},{5,6,7,8},{9,10,11,12}};
+        int[][] arr = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
         int k = 9;
-        int maxCol = arr[0].length -1;
+        int maxCol = arr[0].length - 1;
         int minRow = 0;
-        int maxRow = arr.length -1;
-        while(maxCol >=0 && minRow<= maxRow){
-            if(k == arr[minRow][maxCol]){
+        int maxRow = arr.length - 1;
+        while (maxCol >= 0 && minRow <= maxRow) {
+            if (k == arr[minRow][maxCol]) {
                 System.out.println(minRow);
                 System.out.println(maxCol);
-                return new int[]{minRow,maxCol};
-            }else if(k > arr[minRow][maxCol]){
+                return new int[]{minRow, maxCol};
+            } else if (k > arr[minRow][maxCol]) {
                 minRow++;
-            }else {
+            } else {
                 maxCol--;
             }
         }
 
-        return new int[]{-1,-1};
+        return new int[]{-1, -1};
     }
+
     public static void spiral() {
         int[][] arr = {{1, 2, 3, 5},
-                        {4, 5, 6, 8},
-                        {5, 6, 7, 6},
-                        {1, 2, 3, 9}};
+                {4, 5, 6, 8},
+                {5, 6, 7, 6},
+                {1, 2, 3, 9}};
 
         int minRow = 0;
-         int minCol = 0;
-         int maxRow = arr.length -1;
-         int maxCol = arr[0].length -1;
-         int maxCount = arr.length * arr[0].length;
-         int count =0;
-        while (count < maxCount){
+        int minCol = 0;
+        int maxRow = arr.length - 1;
+        int maxCol = arr[0].length - 1;
+        int maxCount = arr.length * arr[0].length;
+        int count = 0;
+        while (count < maxCount) {
             //min col
-            for(int i=0, j=minCol ; i<= maxRow; i++){
-                System.out.println( arr[i][j]);
+            for (int i = 0, j = minCol; i <= maxRow; i++) {
+                System.out.println(arr[i][j]);
                 count++;
             }
             minCol++;
