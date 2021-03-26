@@ -61,8 +61,6 @@ public class Array {
         int maxRow = arr.length - 1;
         while (maxCol >= 0 && minRow <= maxRow) {
             if (k == arr[minRow][maxCol]) {
-                System.out.println(minRow);
-                System.out.println(maxCol);
                 return new int[]{minRow, maxCol};
             } else if (k > arr[minRow][maxCol]) {
                 minRow++;

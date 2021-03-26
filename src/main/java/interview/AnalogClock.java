@@ -6,7 +6,7 @@ public class AnalogClock {
     private static final double DEGREES_PER_HOUR_MINUTES = 0.5;
 
     public static void main(String[] args) {
-        int result = findAngle(11, 10);
+        int result = findAngle(6, 30);
         System.out.println("Angle is : " + result);
     }
 

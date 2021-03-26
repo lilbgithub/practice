@@ -7,7 +7,7 @@ public class TwoSum {
 
     public static void main(String args[]){
         int[]  number =  { 2,3,7,4,8};
-        int target = 7 ;
+        int target = 5 ;
         int[] result = getTwoSum(number, target);
         System.out.println(result[0]+" "+ result[1]);
     }
@@ -16,7 +16,7 @@ public class TwoSum {
         for(int i=0; i< numbers.length; i++){
             int delta = target - numbers[i];
             if( visitedNumbers.containsKey(delta)){
-             return new int[] {i,visitedNumbers.get(delta)};
+             return new int[] {visitedNumbers.get(delta),i};
             }
             visitedNumbers.put(numbers[i], i);
         }
