@@ -16,17 +16,20 @@ public class CoreScintific {
     }
     private static void nonWorkingSolution(int[] array) {
         int length = array.length - 1;
-        int i = length;
-        int j = length;
+        int i = 0;
+        int j = 0;
 
-        while (i>=0){
+        while (i<=length){
             if(array[i] != 0){
-                i--;
+                array[j] = array[i];
+                i++;
+                j++;
             }else {
-                swap(array, i, j);
-                i--;
-                j--;
+                i++;
             }
+        }
+        while (j< i){
+            array[j++] = 0;
         }
         System.out.println(Arrays.toString(array));
     }
