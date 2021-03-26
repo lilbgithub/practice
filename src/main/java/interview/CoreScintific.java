@@ -12,9 +12,9 @@ public class CoreScintific {
      */
     public static void main(String[] args) {
         int [] array =  {0,1,0,5,2};
-        nonWorkingSolution(array);
+        workingSolution(array);
     }
-    private static void nonWorkingSolution(int[] array) {
+    private static void workingSolution(int[] array) {
         int length = array.length - 1;
         int i = 0;
         int j = 0;
