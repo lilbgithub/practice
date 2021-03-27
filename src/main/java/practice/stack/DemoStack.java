@@ -1,14 +1,14 @@
-package datastructure.linklist;
+package practice.stack;
 
 /**
  * https://www.youtube.com/watch?v=X7asXkoYWCQ&list=PLqq-6Pq4lTTZgXnsBNQwCWdKR6O6Cgk1Z&index=4
  */
-public class Stack {
+public class DemoStack {
     private int top;
     private int capacity;
     private int[] array;
 
-    public Stack(int capacity) {
+    public DemoStack(int capacity) {
         this.capacity = capacity;
         this.array = new int[capacity];
         this.top = -1;
