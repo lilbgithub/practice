@@ -1,4 +1,4 @@
-package practice.ds.linklist;
+package practice.ds.linkedList;
 import java.util.Arrays;
 
 public class MyArrayList {
