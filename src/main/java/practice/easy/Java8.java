@@ -1,6 +1,4 @@
-package easy;
-
-import practice.array.Array;
+package practice.easy;
 
 import java.util.*;
 import java.util.function.Function;
@@ -64,8 +62,8 @@ public class Java8 {
 
         System.out.println(ops1.toString());
 
-        //easy.Employee stream
-        System.out.println("############easy.Employee#############");
+        //practice.easy.Employee stream
+        System.out.println("############practice.easy.Employee#############");
 
         List<Employee> employees = new ArrayList<>();
         employees.add(new Employee("bob", 12.700, "engg"));
@@ -75,7 +73,7 @@ public class Java8 {
         employees.add(new Employee("bob3", 1243.00, "engg4"));
 
         employees.stream().forEach(System.out::println);
-        System.out.println("############easy.Employee#############");
+        System.out.println("############practice.easy.Employee#############");
         employees.stream()
                 .filter(employee -> employee.getSalary() > 100.00)
                 .forEach(System.out::print);

@@ -1,4 +1,4 @@
-package thread;
+package practice.thread;
 
 public class Deadlock {
 

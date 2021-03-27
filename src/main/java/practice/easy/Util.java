@@ -1,4 +1,4 @@
-/**
+package practice.easy; /**
  * example utility
  */
 

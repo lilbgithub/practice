@@ -1,4 +1,4 @@
-package skillz;
+package interview.skillz;
 import java.util.Arrays;
 
 public class MyArrayList {

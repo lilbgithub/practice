@@ -1,4 +1,4 @@
-package skillz;
+package interview.skillz;
 
 public class User {
     private String name;

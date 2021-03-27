@@ -1,4 +1,4 @@
-package easy;
+package practice.easy;
 
 /**
  * Reverse integer
