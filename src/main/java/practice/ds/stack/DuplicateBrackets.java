@@ -1,4 +1,4 @@
-package practice.stack;
+package practice.ds.stack;
 
 import java.util.Stack;
 

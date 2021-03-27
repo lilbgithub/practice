@@ -1,4 +1,4 @@
-package datastructure.linklist;
+package practice.ds.linklist;
 
 public class Runner {
 

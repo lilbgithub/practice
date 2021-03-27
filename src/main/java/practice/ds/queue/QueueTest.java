@@ -1,4 +1,4 @@
-package datastructure.linklist;
+package practice.ds.queue;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

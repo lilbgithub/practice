@@ -1,4 +1,4 @@
-package datastructure.linklist;
+package practice.ds.linklist;
 import java.util.Arrays;
 
 public class MyArrayList {

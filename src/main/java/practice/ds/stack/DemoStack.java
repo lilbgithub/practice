@@ -1,4 +1,4 @@
-package practice.stack;
+package practice.ds.stack;
 
 /**
  * https://www.youtube.com/watch?v=X7asXkoYWCQ&list=PLqq-6Pq4lTTZgXnsBNQwCWdKR6O6Cgk1Z&index=4
