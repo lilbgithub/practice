@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.LinkedList;
+
 public class RainFall {
     public static void main(String[] args) {
         int[] arr = {3, 0, 2, 0, 4};//{0, 2, 0, 3};
