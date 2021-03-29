@@ -13,6 +13,7 @@ class Engine{
         this.speed = speed;
     }
 }
+
 public final class ImmutableClass {
     private final int id;
     private final String name;
@@ -27,15 +28,6 @@ public final class ImmutableClass {
         this.engine = newEngine;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-
     public static void main(String[] args) {
         Engine engine =  new Engine(50);
         ImmutableClass obj =  new ImmutableClass(1,"java", engine);
@@ -44,7 +36,5 @@ public final class ImmutableClass {
         System.out.println(obj.engine.speed);
         engine.speed = 70;
         System.out.println(obj.engine.speed);
-
-
     }
 }
