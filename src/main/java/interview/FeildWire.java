@@ -1,12 +1,9 @@
 package interview;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedList;
+import java.util.*;
 import java.util.stream.Collectors;
 
-import static java.util.stream.Collectors.toList;
-import static java.util.stream.Collectors.toSet;
+import static java.util.stream.Collectors.*;
 
 /**
  * https://www.geeksforgeeks.org/java-program-to-find-common-elements-between-two-arrays/
@@ -23,17 +20,40 @@ import static java.util.stream.Collectors.toSet;
  */
 public class FeildWire {
     public static void main(String[] args) {
-        int[] arr1 = new int[]{1, 2, 3, 4, 5, 6, 7};
-        int[] arr2 = new int[]{1, 3, 4, 5, 6, 9, 8};
-        HashSet<Integer> set = new HashSet<>();
+        String[] arr1 = new String[]{"a", "b", "c", "d", "e", "f"};
+        String[] arr2 = new String[]{"b", "d", "e", "h", "g", "c"};
 
-        Arrays.stream(arr1).forEach(set::add);
+       List<String> list = Arrays.stream(arr1).distinct().collect(Collectors.toList());
 
-        int[] result = Arrays.stream(arr2)
-                .filter(item -> set.contains(item)).
-                toArray();
+        List<String> result = Arrays.stream(arr2).distinct()
+                .filter(item -> list.contains(item)).sorted().collect(Collectors.toList());
 
-        System.out.println(Arrays.toString(result));
+        //System.out.println(Arrays.toString(result.toArray()));
 
+        //mergeTwoArraysAvoidDuplicate();
+        mergeTwoArraysAvoidDuplicateSolution2();
+
+    }
+    public static void mergeTwoArraysAvoidDuplicate(){
+
+        String[] arr1 = new String[]{"a", "b", "c", "d", "e", "f"};
+        String[] arr2 = new String[]{"b", "d", "e", "h", "g", "c"};
+
+        List<String>  result = Arrays.stream(arr1).distinct().collect(Collectors.toList());
+        Arrays.stream(arr2).distinct().filter(i-> !result.contains(i)).forEach(i-> result.add(i));
+
+        Collections.sort(result);
+        System.out.println(result);
+    }
+    public static void mergeTwoArraysAvoidDuplicateSolution2(){
+
+        String[] arr1 = new String[]{"a", "b", "c", "d", "e", "f"};
+        String[] arr2 = new String[]{"b", "d", "e", "h", "g", "c"};
+
+        Set<String>  set = new LinkedHashSet<>(Arrays.asList(arr1));
+        set.addAll(Arrays.asList(arr2));
+
+        List<String> list = new ArrayList<>(set);
+        System.out.println(list);
     }
 }
