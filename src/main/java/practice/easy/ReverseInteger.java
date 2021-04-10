@@ -20,5 +20,26 @@ public class ReverseInteger {
             }
         }
         System.out.println(reverse);
+
+        System.out.println("Check if palindrome: " + isPalindrome(1221));
+        System.out.println("Check if palindrome: " + isPalindrome(1321));
+    }
+    public static boolean isPalindrome(int number){
+
+        int orginalNumber =  number;
+        int reverse = 0;
+        int remainder = 0;
+
+        while (number != 0){
+            remainder =  number%10;
+            reverse = reverse * 10 + remainder;
+            number = number /10;
+        }
+
+        if(reverse == orginalNumber){
+            return true;
+        }
+
+        return false;
     }
 }

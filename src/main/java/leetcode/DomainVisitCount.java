@@ -10,6 +10,7 @@ import java.util.Map;
  * https://leetcode.com/problems/subdomain-visit-count/
  */
 public class DomainVisitCount {
+
     public static void main(String[] args) {
         String[] list = {"900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"};
         Map<String, Integer> map = new HashMap<>();

@@ -34,7 +34,5 @@ class UtilTest extends Specification {
         "abc" | "cba" | true
         "abc" | "cd"  | false
         "abc" | "abc" | false
-
-
     }
 }

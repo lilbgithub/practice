@@ -1,4 +1,4 @@
-package practice.recursion;
+package leetcode.practice.recursion;
 
 public class Recursion {
     public static void main(String[] args) {
