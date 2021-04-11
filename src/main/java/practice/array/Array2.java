@@ -16,20 +16,20 @@ public class Array2 {
         while (end < array.length ) {
             sum = sum + array[end];
             if (sum == k) {
-                System.out.println(sum + "is at i:" + start + " j:" + end);
+                System.out.println(sum + "is at start:" + start + " end:" + end);
                 return;
             }
             while (sum > k && start <=end){
                 sum = sum - array[start];
                 start++;
                 if (sum == k) {
-                    System.out.println(sum + "is at i:" + start + " j:" + end);
+                    System.out.println(sum + "is at start:" + start + " end:" + end);
                     return;
                 }
             }
             end++;
         }
-        System.out.println("NO such sub array");
+        System.out.println("No such sub array");
 
     }
 }

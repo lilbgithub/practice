@@ -54,15 +54,15 @@ public class MyArrayList {
 
     public static void main(String a[]){
         MyArrayList mal = new MyArrayList();
-        mal.add(new Integer(2));
-        mal.add(new Integer(5));
-        mal.add(new Integer(1));
-        mal.add(new Integer(23));
-        mal.add(new Integer(14));
+        mal.add(2);
+        mal.add(5);
+        mal.add(1);
+        mal.add(23);
+        mal.add(14);
         for(int i=0;i<mal.size();i++){
             System.out.print(mal.get(i)+" ");
         }
-        mal.add(new Integer(29));
+        mal.add(29);
         System.out.println("Element at Index 5:"+mal.get(5));
         System.out.println("List size: "+mal.size());
         System.out.println("Removing element at index 2: "+mal.remove(2));

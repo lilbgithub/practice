@@ -14,7 +14,6 @@ public class Pattern4 {
                 System.out.print("\t*");
             }
             System.out.println();
-//            System.out.println(spaces+" "+stars);
             spaces++;
             stars--;
         }

@@ -54,9 +54,9 @@ public class ComparableComparator {
         //Comparator
         PriorityQueue<Student> pq3 =  new PriorityQueue<>(Comparator.comparing(student -> student.name));
 
-        pq3.add(new Student(11,82,"lil1"));
-        pq3.add(new Student(15,89,"lil3"));
-        pq3.add(new Student(12,86,"lil2"));
+        pq3.add(new Student(11,82,"ab"));
+        pq3.add(new Student(15,89,"ba"));
+        pq3.add(new Student(12,86,"cd"));
         pq3.add(new Student(18,00,"lil4"));
         pq3.add(new Student(10,80,"lil0"));
 

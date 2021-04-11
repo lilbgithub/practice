@@ -1,8 +1,8 @@
 package practice.ds.linkedList;
 
-public class AddLastLinkList {
+public class MyLinkList {
     public static class Node {
-        int data;
+        Object data;
         Node next;
     }
 
@@ -44,7 +44,7 @@ public class AddLastLinkList {
             size--;
         }
 
-        public int getFirst() {
+        public Object getFirst() {
             if (this.head == null) {
                 System.out.println("List is empty");
                 return -1;
@@ -52,7 +52,7 @@ public class AddLastLinkList {
             return head.data;
         }
 
-        public int getLast() {
+        public Object getLast() {
             if (this.head == null) {
                 System.out.println("List is empty");
                 return -1;
@@ -60,7 +60,7 @@ public class AddLastLinkList {
             return tail.data;
         }
 
-        public int getAt(int index) {
+        public Object getAt(int index) {
             if (index >= size) {
                 System.out.println("Index out of bond");
                 throw new IndexOutOfBoundsException("Exceeded max index +" + this.size);
@@ -69,8 +69,8 @@ public class AddLastLinkList {
             int count = 0;
             Node node = this.head;
             while (count != index) {
-                count++;
                 node = node.next;
+                count++;
             }
             return node.data;
         }
@@ -117,7 +117,7 @@ public class AddLastLinkList {
                 Node left = getNodeAt(lo);
                 Node right = getNodeAt(hi);
 
-                int temp = left.data;
+                Object temp = left.data;
                 left.data = right.data;
                 right.data = temp;
 

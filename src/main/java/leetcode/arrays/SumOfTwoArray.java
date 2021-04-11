@@ -19,12 +19,12 @@ public class SumOfTwoArray {
             if (arr1[i] >= 0) {
                 digit += arr1[i];
             }
-            if(arr2[j] >= 0){
+            if (arr2[j] >= 0) {
                 digit += arr2[j];
             }
 
-            carry = digit/10;
-            digit = digit%10;
+            carry = digit / 10;
+            digit = digit % 10;
 
             sum[k] = digit;
 
@@ -32,11 +32,11 @@ public class SumOfTwoArray {
             j--;
             k--;
         }
-        if(carry > 0){
+        if (carry > 0) {
             System.out.print(carry);
         }
 
-        for (int element : sum){
+        for (int element : sum) {
             System.out.println(element);
         }
     }
