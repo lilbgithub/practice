@@ -1,4 +1,4 @@
-package practice.easy;
+package practice.ds.set;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

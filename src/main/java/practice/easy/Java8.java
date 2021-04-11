@@ -25,9 +25,9 @@ public class Java8 {
         System.out.println(IntStream.of(list1).max().getAsInt());
         System.out.println("#########################");
         System.out.println(IntStream.of(list1).sum());
-        System.out.println("#########################");
+        System.out.println("##############reduce###########");
         System.out.println(IntStream.of(list1).reduce(0, (x, y) -> x + y));
-        System.out.println("#########################");
+        System.out.println("############reduce2#############");
         System.out.println(IntStream.of(list1).reduce(1, (x, y) -> x * y));
 
         //intermediate operation

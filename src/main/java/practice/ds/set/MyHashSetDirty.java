@@ -1,4 +1,4 @@
-package practice.easy;
+package practice.ds.set;
 
 public class MyHashSetDirty {
     private boolean[] array;
