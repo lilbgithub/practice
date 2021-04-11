@@ -1,6 +1,4 @@
-package practice.Timespace;
-
-import practice.array.Array;
+package practice.array.Timespace;
 
 import java.util.Arrays;
 

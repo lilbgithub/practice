@@ -5,34 +5,39 @@ package practice.strings;
  */
 public class StringsPractice {
     public static void main(String[] args) {
-        // substrings();
-        //  palindromSubSring();
-        //stringCompression1();
-       // stringCompression2();
+        System.out.println("#########substrings()############");
+        substrings();
+        System.out.println("#########palindromSubSring()############");
+        palindromSubSring();
+        System.out.println("#########stringCompression1()############");
+        stringCompression1();
+        System.out.println("#########stringCompression2()############");
+        stringCompression2();
+        System.out.println("#########reverseStringExceptSpecialChar()############");
         reverseStringExceptSpecialChar();
 
     }
 
     public static void reverseStringExceptSpecialChar() {
         String str = "a,b$c";
-        char[] array =  str.toCharArray();
+        char[] array = str.toCharArray();
         int left = 0;
         int right = str.length() - 1;
 
-        while (left < right){
-            if(!Character.isAlphabetic(array[left])){
+        while (left < right) {
+            if (!Character.isAlphabetic(array[left])) {
                 left++;
-            }else if(!Character.isAlphabetic(array[right])){
+            } else if (!Character.isAlphabetic(array[right])) {
                 right--;
-            }else {
-                char ch =  array[left];
-                array[left] =array[right];
+            } else {
+                char ch = array[left];
+                array[left] = array[right];
                 array[right] = ch;
                 left++;
                 right--;
             }
         }
-        System.out.println("reverseStringExceptSpecialChar :"+ String.valueOf(array));
+        System.out.println("reverseStringExceptSpecialChar :" + String.valueOf(array));
     }
 
     public static final void stringCompression2() {

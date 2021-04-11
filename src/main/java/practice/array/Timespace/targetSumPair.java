@@ -1,4 +1,4 @@
-package practice.Timespace;
+package practice.array.Timespace;
 
 import java.util.Arrays;
 

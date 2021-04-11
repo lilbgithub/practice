@@ -7,7 +7,7 @@ public class TwoSum {
 
     public static void main(String args[]){
         int[]  number =  { 2,3,7,4,8};
-        int target = 5 ;
+        int target = 12 ;
         int[] result = getTwoSum(number, target);
         System.out.println(result[0]+" "+ result[1]);
     }

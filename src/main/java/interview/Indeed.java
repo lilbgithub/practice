@@ -1,5 +1,7 @@
 package interview;
 
+import java.util.Arrays;
+
 /**
  * You are running a classroom and suspect that some of your students are passing around the answers to multiple choice questions disguised as random strings.
  * <p>

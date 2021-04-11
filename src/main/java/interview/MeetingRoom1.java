@@ -2,15 +2,17 @@ package interview;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.PriorityQueue;
 
 public class MeetingRoom1 {
     public static void main(String[] args) {
-        int[][] arr = {{0,1}, {1,3},{2,4}};
+        int[][] arr = {{0, 1}, {1, 3}, {2, 4}};
         canAttendMeetings(arr);
     }
 
     /**
      * O(nLogn)
+     *
      * @param intArrays
      * @return
      */
@@ -35,6 +37,5 @@ public class MeetingRoom1 {
             System.out.println("no overlap");
             return true;
         }
-
     }
 }
